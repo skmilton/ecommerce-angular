@@ -1,0 +1,54 @@
+<p>order works!</p>
+<div class="container h-100 ">
+
+  <div class="row align-items-center h-100">
+    <div class="col-6 mx-auto">
+
+      <div class="ibox">
+        <div class="ibox-head">
+          <div class="ibox-title">Create</div>
+        </div>
+        <div class="ibox-body">
+          <div class="form-group text-right">
+            <button class="btn btn-primary" type="button" (click)="backToHome()">Back to Home</button>
+          </div>
+
+          <form>
+
+            <div class="form-group">
+              <label>Total Price</label>
+              <input class="form-control"
+                     [(ngModel)]="this.model.totalPrice" [ngModelOptions]="{standalone: true}"
+                     type="text"/>
+            </div>
+
+            <div class="form-group">
+              <label>Date</label>
+              <input class="form-control"
+                     [(ngModel)]="this.model.date" [ngModelOptions]="{standalone: true}"
+                     type="text"/>
+            </div>
+
+            <div class="form-group">
+              <label>Delivery Date</label>
+              <input class="form-control"
+                     [(ngModel)]="this.model.deliveryDate" [ngModelOptions]="{standalone: true}"
+                     type="text"/>
+            </div>
+
+
+            <div class="form-group text-right">
+              <button (click)="createOrder()" class="btn btn-primary">Create Order</button>
+            </div>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

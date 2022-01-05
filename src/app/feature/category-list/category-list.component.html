@@ -1,0 +1,40 @@
+<p>category-list works!</p>
+<div class="col-md-9 ibox">
+  <div class="ibox-head">
+    <div class="ibox-title alert-success text-center">Category List</div>
+  </div>
+
+  <div class="form-group text-right">
+    <button class="btn btn-primary" type="button" (click)="backToHome()">Back to Home</button>
+  </div>
+  <div class="ibox-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Category Name</th>
+        <th scope="col">Options</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let category of categoryList">
+        <td style="width: 30%">{{ category.categoryName }}</td>
+        <td>
+          <a (click)="onCategoryShowById(category.id)"><i class="fa fa-eye"></i></a>
+
+          <a (click)="onCategoryEditById(category.id)"><i class="fa fa-edit"></i></a>
+
+          <a (click)="onCategoryDeleteById(category.id)"><i class="fa fa-trash"></i></a>
+
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ibox-footer">
+    <div class="text-center">
+      <!-- <pagination-controls (pageChange)="pageChange($event)" class="my-pagination"></pagination-controls>-->
+    </div>
+
+  </div>
+</div>
+
